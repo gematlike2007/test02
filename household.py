@@ -214,8 +214,7 @@ class HouseholdAccount:
                 # ✅ 기준금 지급 플래그를 1로 설정
                 self.df.at[idx, 'base_income_added'] = 1
 
-                print(f"✅ {month}월 {day}일 (기준일)에 {self.base_money:,}원 자동 추가")
-
+            
     def recalculate_all_balances(self):
         """
         ✅ DataFrame 전체의 잔고를 순차적으로 재계산
@@ -622,7 +621,7 @@ def main():
                 key="input_nestegg"
             )
 
-            settings_submit = st.form_submit_button("✅ 설정 적용", use_container_width=True, type="primary")
+            settings_submit = st.form_submit_button("설정 적용", use_container_width=True, type="primary")
 
         # ✅ Form 제출 시 설정 적용
         if settings_submit:
